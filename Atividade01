@@ -1,0 +1,30 @@
+fun main() {
+
+    println("Digite operação: ")
+    val op = readln().replace(" ", "")
+
+    if (op.contains("+")) {
+        val soma = op.split("+")
+        println(soma[0].toInt() + soma[1].toInt())
+
+    } else if (op.contains("-")) {
+        val sub = op.split("-")
+        println(sub[0].toInt() - sub[1].toInt())
+
+    } else if (op.contains("*")) {
+        val mult = op.split("*")
+        println(mult[0].toInt() * mult[1].toInt())
+
+    } else if (op.contains("/")) {
+        val div = op.split("/")
+
+        if (div[1].toInt() != 0) {
+            println(div[0].toInt() / div[1].toInt())
+        } else {
+            println("Não é possível dividir por zero.")
+        }
+
+    } else {
+        println("Operação inválida.")
+    }
+}
